@@ -26,7 +26,7 @@ type UserCardProps = {
 const UserCard: FC<UserCardProps> = ({ user }) => {
   const image = (user?.profileImg as string) || '/defaultUser.jpg';
   return (
-    <Card className="w-full lg:w-[800px]">
+    <Card className="w-full lg:w-[800px] bg-slate-500">
       <CardHeader>
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-12">
           <div className="flex flex-col items-center gap-2">

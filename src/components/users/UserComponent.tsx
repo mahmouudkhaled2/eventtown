@@ -17,7 +17,7 @@ const UserComponent: FC<UserComponentProps> = ({
 }) => {
   const image = (user?.profileImg as string) || '/defaultUser.jpg';
   return (
-    <div className={cn('flex w-full items-center gap-3', className)} {...props}>
+    <div className={cn('flex w-full items-center gap-3 ', className)} {...props}>
       <MyImage src={image} alt={user.name} width={50} height={50} />
       <div className="flex flex-col overflow-hidden text-ellipsis text-xs">
         <Button
@@ -28,7 +28,7 @@ const UserComponent: FC<UserComponentProps> = ({
             <Link href={`/users/${user._id}`} className="capitalize">
               {user.name}
             </Link>
-          </span>
+          </span>   
         </Button>
         <RecordComponent label="Email" value={user.email} />
         <RecordComponent label="location" value={user.location.toUpperCase()} />

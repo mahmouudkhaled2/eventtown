@@ -44,7 +44,9 @@ const Events = () => {
     refresh,
     cancelQuery,
   });
+
   usePageTitle('Events');
+  
   return (
     <PageContent>
       <PageHeader>

@@ -74,18 +74,18 @@ const DataStatsCards = () => {
       {stats.map((stat) => (
         <div
           key={stat.id}
-          className="bg-[#f5f5f4] relative rounded-3xl md:p-6 p-3 flex flex-col md:gap-4 gap-3 transition-all duration-300 overflow-hidden"
+          className="bg-[#f5f5f4] dark:bg-[#262626] relative rounded-3xl md:p-6 p-3 flex flex-col md:gap-4 gap-3 transition-all duration-300 overflow-hidden"
         >
           <div className="flex justify-between">
             <div className="flex gap-2">
               <div className="rounded-full text-2xl">{stat.icon}</div>
-              <h3 className="text-md font-bold text-black truncate">{stat.title}</h3>
+              <h3 className="text-md font-bold text-black dark:text-white truncate">{stat.title}</h3>
             </div>
             {stat.title === "New Users" && <SelectPeriod period={period} setPeriod={setPeriod} />}
           </div>
-          <span className="lg:text-4xl text-3xl font-bold text-gray-900 truncate">{stat.value}</span>
+          <span className="lg:text-4xl text-3xl font-bold text-gray-900 dark:text-white truncate">{stat.value}</span>
           <div className="flex text-md md:gap-2 gap-1">
-            <p className="text-[#494949]">Last Month</p>
+            <p className="text-[#494949] dark:text-[#ddd]">Last Month</p>
           </div>
         </div>
       ))}
